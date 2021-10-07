@@ -1,7 +1,7 @@
 function calculate(e){
-	var result = document.GetElementById("expression").value.trim();
+	var result = document.getElementById('result');
 	if(e.keyCode==13){
-	var v = document.GetElementById("expression").value.trim();
+	var v = document.getElementById('expression').value.trim();
 	var ex = new Expression("");
 		if (v != ""){
 			try{
@@ -15,7 +15,7 @@ function calculate(e){
 	}
 	else result.innerText = "";
 }
-document.addEventListener('DOMContentLoaded',function(){
-	var expr = document.GetElementById('expression');
+document.addEventListener('DOMContentLoaded', function() {
+	var expr = document.getElementById('expression');
 	expr.addEventListener('keyup', calculate);
 })
